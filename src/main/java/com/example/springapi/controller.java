@@ -1,5 +1,5 @@
 package com.example.springapi;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +12,7 @@ public class controller {
         return "Hello";
     }
     @GetMapping("/welcome") 
-    public String welcome() {
-        return "Welcome to my Site!";
+    public user welcome() {
+        return new user("Aaryan", 15);
     }
 }
