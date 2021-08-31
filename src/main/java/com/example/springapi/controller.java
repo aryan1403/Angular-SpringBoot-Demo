@@ -12,7 +12,10 @@ public class controller {
         return "Hello";
     }
     @GetMapping("/welcome") 
-    public user welcome() {
-        return new user("Aaryan", 15);
+    public user[] welcome() {
+        user[] arr = new user[2];
+        arr[0] = new user("Aaryan", 15);
+        arr[1] = new user("Shadab", 24);
+        return arr;
     }
 }
